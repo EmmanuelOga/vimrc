@@ -23,6 +23,7 @@ task :update_bundles do
     if File.exist?(bundle_path(name, ".git"))
       system("cd #{bundle_path(name).shellescape}; git pull --rebase")
     else
+      mkdir_p(File.dirname(bundle_path(name)))
       system("git clone #{url.shellescape} #{bundle_path(name).shellescape}")
     end
   end
@@ -37,10 +38,10 @@ task :cleanup_bundles do
   current = (BUNDLES.keys + CLEANUP_EXCLUDES).map { |name| bundle_path(name) }
 
   Dir[File.expand_path(File.join(BUNDLES_BASE_PATH, "*"))].each do |path|
-    unless current.include?(path)
+    unless current.detect { |any| any =~ /^#{path}/ }
       puts(path)
-      print("...is not in the list of bundles. Run with BUNDLES_CLEANUP=1")
-      system("rm -r #{path.shellescape}") if ENV["BUNDLES_CLEANUP"]
+      print("...is not in the list of bundles. Run: 'rake cleanup_bundles PERFORM_CLEANUP=1' to remove.")
+      system("rm -r #{path.shellescape}") if ENV["PERFORM_CLEANUP"]
     end
   end
 
