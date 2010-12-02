@@ -54,7 +54,8 @@ set autowrite          " Writes on make/shell commands
 set cf                 " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
 set nu                 " Line numbers on
-set timeoutlen=250     " Time to wait after ESC (default causes an annoying delay)
+
+" set timeoutlen=250   " Time to wait after ESC (default causes an annoying delay)
 
 " Formatting (some of these are for coding in C and C++)
 set noautoindent
@@ -82,9 +83,6 @@ set directory=~/.vim/tmp     " Where temporary files will go.
 
 " Reformat paragraphs and list.
 nnoremap Q gq}
-
-" Delete trailing white space and Dos-returns and to expand tabs to spaces.
-nnoremap S :set et<CR>:retab!<CR>:%s/[\r \t]\+$//<CR>
 
 " Spell checks
 map <silent> <F6>  <Esc>:setlocal spell spelllang=en_gb<CR>
