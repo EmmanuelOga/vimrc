@@ -29,10 +29,12 @@ task :update_bundles do
   Rake::Task[:cleanup_bundles].invoke
 end
 
+CLEANUP_EXCLUDES = %w[rsense]
+
 desc "remove old directories"
 task :cleanup_bundles do
   puts "Looking up bundles to cleanup..."
-  current = BUNDLES.keys.map { |name| bundle_path(name) }
+  current = (BUNDLES.keys + CLEANUP_EXCLUDES).map { |name| bundle_path(name) }
 
   Dir[File.expand_path(File.join(BUNDLES_BASE_PATH, "*"))].each do |path|
     unless current.include?(path)
@@ -41,4 +43,6 @@ task :cleanup_bundles do
       system("rm -r #{path.shellescape}") if ENV["BUNDLES_CLEANUP"]
     end
   end
+
+  puts "Done."
 end
