@@ -19,20 +19,9 @@ endfunction
 " Command-e for ConqueTerm
 map <leader>x :call StartTerm()<CR>
 
-if filereadable(expand("~/.vim/rc/nerdtree"))
-  source ~/.vim/rc/nerdtree
-endif
-
-if filereadable(expand("~/.vim/rc/rspec"))
-  source ~/.vim/rc/rspec
-endif
-
-if filereadable(expand("~/.vim/rc/rsense"))
-  source ~/.vim/rc/rsense
-endif
-
-if has("autocmd")
-  if filereadable(expand("~/.vim/rc/autocmd"))
-    source ~/.vim/rc/autocmd
-  endif
-endif
+" Load additional plugin configurations and stuff
+ruby << RUBY
+  Dir[File.expand_path("~/.vim/rc") + "/*"].each do |rc|
+    Vim.command("source #{File.expand_path(rc)}")
+  end
+RUBY
