@@ -12,7 +12,11 @@ matchit:                      "git://github.com/vim-scripts/matchit.zip.git"
 YAIFA:                        "git://github.com/Raimondi/YAIFA.git"
 ack:                          "git://github.com/mileszs/ack.vim.git"
 align:                        "git://github.com/tsaleh/vim-align.git"
+
 autoclose:                    "git://github.com/Townk/vim-autoclose.git"
+# Alternative autocloser:
+# delimitMate:                  "git://github.com/Raimondi/delimitMate.git"
+
 closebuffer:                  "git://github.com/bronson/vim-closebuffer.git"
 indent_object:                "git://github.com/michaeljsmith/vim-indent-object.git"
 javascript:                   "git://github.com/pangloss/vim-javascript.git"
@@ -22,7 +26,6 @@ supertab:                     "git://github.com/ervandew/supertab.git"
 textile.vim:                  "git://github.com/timcharper/textile.vim.git"
 trailing-whitespace:          "git://github.com/bronson/vim-trailing-whitespace.git"
 vim-coffee-script:            "git://github.com/kchmck/vim-coffee-script.git"
-tcomment:                     "git://github.com/tomtom/tcomment_vim.git"
 
 rails:                        "git://github.com/tpope/vim-rails.git"
 rake:                         "git://github.com/tpope/vim-rake.git"
@@ -34,16 +37,17 @@ vim-ruby-sinatra:             "git://github.com/hallison/vim-ruby-sinatra.git"
 # rubytest:                   "git://github.com/janx/vim-rubytest.git"
 
 command-t:                    "git://git.wincent.com/command-t.git"
-fuzzy-finder:                 "http://bitbucket.org/ns9tks/vim-fuzzyfinder"
 
-# fuzzy finder dependency:
+fuzzy-finder:                 "http://bitbucket.org/ns9tks/vim-fuzzyfinder"
 v9:                           "http://bitbucket.org/ns9tks/vim-l9"
 
 snipmate:                     "git://github.com/msanders/snipmate.vim.git"
 "snipmate-snippets/snippets": "git://github.com/scrooloose/snipmate-snippets.git"
 
-nerdtree:                     "git://github.com/scrooloose/nerdtree.git"
+tcomment:                     "git://github.com/tomtom/tcomment_vim.git"
 # nerdcommenter:              "git://github.com/scrooloose/nerdcommenter.git"
+
+nerdtree:                     "git://github.com/scrooloose/nerdtree.git"
 space:                        "git://github.com/scrooloose/vim-space.git"
 syntastic:                    "git://github.com/scrooloose/syntastic.git"
 
