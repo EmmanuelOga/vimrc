@@ -20,12 +20,17 @@ desc "installation bundles"
 task :update_bundles do
   BUNDLES.each do |name, url|
     puts("Updating #{name}")
+
     if File.exist?(bundle_path(name, ".git"))
       system("cd #{bundle_path(name).shellescape}; git pull --rebase")
+    elsif File.exist?(bundle_path(name, ".hg"))
+      system("cd #{bundle_path(name).shellescape}; hg pull -u")
     else
       mkdir_p(File.dirname(bundle_path(name)))
-      system("git clone #{url.shellescape} #{bundle_path(name).shellescape}")
+      command = ( url =~ /bitbucket/ ) ? :hg : :git
+      system("#{command} clone #{url.shellescape} #{bundle_path(name).shellescape}")
     end
+
   end
   Rake::Task[:cleanup_bundles].invoke
 end
