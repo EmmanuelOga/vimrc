@@ -5,9 +5,16 @@ call pathogen#helptags()
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
+" Load additional plugin configurations and stuff
+for rc in split(globpath(&rtp, "rc/*"), "\n")
+  execute "source" rc
+endfor
+
+colorscheme ir_black
+
+syntax on
 set nocompatible
 set number
-syntax on
 
 " Whitespace stuff
 set nowrap
@@ -25,9 +32,6 @@ set smartcase
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc
-
-" Status bar
-set laststatus=2
 
 set hidden        " Better buffer management
 set nobackup
@@ -50,10 +54,8 @@ map <silent> <m-n> :cn <cr>
 " Change which file opens after executing :Rails command
 let g:rails_default_file='config/database.yml'
 
-set autowrite          " Writes on make/shell commands
 set cf                 " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
-set nu                 " Line numbers on
 
 set timeoutlen=500     " Time to wait after ESC (default causes an annoying delay)
 
@@ -77,6 +79,7 @@ set novisualbell       " No blinking .
 set showmatch          " Show matching brackets.
 
 " Backups & Files
+set autowrite                " Writes on make/shell commands
 set backup                   " Enable creation of backup file.
 set backupdir=~/.vim/backups " Where backups will go.
 set directory=~/.vim/tmp     " Where temporary files will go.
@@ -96,19 +99,6 @@ noremap <C-L> <C-W>l
 
 let mapleader = ","
 
-" Command-T configuration
-let g:CommandTMaxHeight=20
-
-" ZoomWin configuration
-map <Leader>z :ZoomWin<CR>
-
-" CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
 " Opens a tab edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>t
 map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
@@ -116,6 +106,13 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+
+" Opens an edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>e
+map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" expand %% to filepath of current file
+cabbr %% <C-R>=expand('%:p:h')<CR>
 
 " Unimpaired configuration
 " Bubble single lines

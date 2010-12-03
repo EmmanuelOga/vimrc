@@ -1,5 +1,3 @@
-" filetype=vim
-
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>nn :NERDTreeFind<CR>
