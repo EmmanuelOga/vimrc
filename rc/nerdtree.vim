@@ -21,7 +21,7 @@ function! s:CdIfDirectory(directory)
   endif
 endfunction
 
-" NERDTree utility function!
+" NERDTree utility function
 function! s:UpdateNERDTree(stay)
   if exists("t:NERDTreeBufName")
     if bufwinnr(t:NERDTreeBufName) != -1
@@ -33,7 +33,7 @@ function! s:UpdateNERDTree(stay)
   endif
 endfunction
 
-" Utility function!s to create file commands
+" Utility functions to create file commands
 function! s:CommandCabbr(abbreviation, expansion)
   execute 'cabbrev ' . a:abbreviation . ' <c-r>=getcmdpos() == 1 && getcmdtype() == ":" ? "' . a:expansion . '" : "' . a:abbreviation . '"<CR>'
 endfunction
@@ -45,7 +45,7 @@ function! s:FileCommand(name, ...)
     let funcname = a:name
   endif
 
-  execute 'command -nargs=1 -complete=file ' . a:name . ' :call ' . funcname . '(<f-args>)'
+  execute 'command! -nargs=1 -complete=file ' . a:name . ' :call ' . funcname . '(<f-args>)'
 endfunction
 
 function! s:DefineCommand(name, destination)
@@ -53,7 +53,7 @@ function! s:DefineCommand(name, destination)
   call s:CommandCabbr(a:name, a:destination)
 endfunction
 
-" Public NERDTree-aware versions of builtin function!s
+" Public NERDTree-aware versions of builtin functions
 function! ChangeDirectory(dir, ...)
   execute "cd " . a:dir
   let stay = exists("a:1") ? a:1 : 1
