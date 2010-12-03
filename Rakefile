@@ -34,7 +34,7 @@ CLEANUP_EXCLUDES = %w[rsense]
 
 desc "remove old directories"
 task :cleanup_bundles do
-  puts "Looking up bundles to cleanup..."
+  puts "\nLooking up bundles to cleanup..."
   current = (BUNDLES.keys + CLEANUP_EXCLUDES).map { |name| bundle_path(name) }
 
   Dir[File.expand_path(File.join(BUNDLES_BASE_PATH, "*"))].each do |path|

@@ -22,6 +22,7 @@ supertab:                     "git://github.com/ervandew/supertab.git"
 textile.vim:                  "git://github.com/timcharper/textile.vim.git"
 trailing-whitespace:          "git://github.com/bronson/vim-trailing-whitespace.git"
 vim-coffee-script:            "git://github.com/kchmck/vim-coffee-script.git"
+tcomment:                     "git://github.com/tomtom/tcomment_vim.git"
 
 rails:                        "git://github.com/tpope/vim-rails.git"
 rake:                         "git://github.com/tpope/vim-rake.git"
@@ -38,7 +39,7 @@ snipmate:                     "git://github.com/msanders/snipmate.vim.git"
 "snipmate-snippets/snippets": "git://github.com/scrooloose/snipmate-snippets.git"
 
 nerdtree:                     "git://github.com/scrooloose/nerdtree.git"
-nerdcommenter:                "git://github.com/scrooloose/nerdcommenter.git"
+# nerdcommenter:              "git://github.com/scrooloose/nerdcommenter.git"
 space:                        "git://github.com/scrooloose/vim-space.git"
 syntastic:                    "git://github.com/scrooloose/syntastic.git"
 
