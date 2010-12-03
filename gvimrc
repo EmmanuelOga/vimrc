@@ -10,15 +10,6 @@ colorscheme ir_black
 set guioptions=
 set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
 
-" ConqueTerm wrapper
-function! StartTerm()
-  execute 'ConqueTerm ' . $SHELL . ' --login'
-  setlocal listchars=tab:\ \
-endfunction
-
-" Command-e for ConqueTerm
-map <leader>x :call StartTerm()<CR>
-
 " Load additional plugin configurations and stuff
 ruby << RUBY
   Dir[File.expand_path("~/.vim/rc") + "/*"].each do |rc|
