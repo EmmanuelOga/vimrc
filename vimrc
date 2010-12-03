@@ -55,7 +55,7 @@ set cf                 " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
 set nu                 " Line numbers on
 
-" set timeoutlen=250   " Time to wait after ESC (default causes an annoying delay)
+set timeoutlen=500     " Time to wait after ESC (default causes an annoying delay)
 
 " Formatting (some of these are for coding in C and C++)
 set noautoindent
