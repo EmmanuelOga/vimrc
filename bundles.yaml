@@ -34,6 +34,10 @@ vim-ruby-sinatra:             "git://github.com/hallison/vim-ruby-sinatra.git"
 # rubytest:                   "git://github.com/janx/vim-rubytest.git"
 
 command-t:                    "git://git.wincent.com/command-t.git"
+fuzzy-finder:                 "http://bitbucket.org/ns9tks/vim-fuzzyfinder"
+
+# fuzzy finder dependency:
+v9:                           "http://bitbucket.org/ns9tks/vim-l9"
 
 snipmate:                     "git://github.com/msanders/snipmate.vim.git"
 "snipmate-snippets/snippets": "git://github.com/scrooloose/snipmate-snippets.git"
