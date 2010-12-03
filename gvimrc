@@ -11,8 +11,6 @@ set guioptions=
 set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
 
 " Load additional plugin configurations and stuff
-ruby << RUBY
-  Dir[File.expand_path("~/.vim/rc") + "/*"].each do |rc|
-    Vim.command("source #{File.expand_path(rc)}")
-  end
-RUBY
+for rc in split(globpath(&rtp, "rc/*"), "\n")
+  execute "source" rc
+endfor
