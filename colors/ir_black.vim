@@ -65,6 +65,14 @@ let colors_name = "ir_black"
 
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
+hi SignColumn       guifg=#1010FD     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+
+" ShowMarks
+hi ShowMarksHLl     guifg=#701010     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi ShowMarksHLu     guifg=#701010     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi ShowMarksHLo     guifg=#701010     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi ShowMarksHLm     guifg=#701010     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+
 " General colors
 hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
@@ -207,6 +215,5 @@ hi link javaScriptNumber      Number
 
 " Special for CSharp
 hi  link csXmlTag             Keyword
-
 
 " Special for PHP
