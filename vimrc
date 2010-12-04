@@ -10,6 +10,13 @@ for rc in split(globpath(&rtp, "rc/*"), "\n")
   execute "source" rc
 endfor
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Map ';' to : so I don't have to press shift when typing commands.
+" http://nvie.com/posts/how-i-boosted-my-vim/
+nnoremap ; :
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 colorscheme ir_black
 
 syntax on
@@ -83,6 +90,12 @@ set autowrite                " Writes on make/shell commands
 set backup                   " Enable creation of backup file.
 set backupdir=~/.vim/backups " Where backups will go.
 set directory=~/.vim/tmp     " Where temporary files will go.
+
+" use sudo to overwrite readonly files
+cmap w!! w !sudo tee % >/dev/null
+
+" clear the search highlight
+nmap <silent> ,/ :nohlsearch<CR>
 
 " Reformat paragraphs and list.
 nnoremap Q gq}
