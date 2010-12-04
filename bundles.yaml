@@ -1,4 +1,6 @@
 ---
+"hexHighLight/plugin":        "git://github.com/EmmanuelOga/hexHighlight.git"
+
 IndexedSearch:                "git://github.com/vim-scripts/IndexedSearch.git"
 camelcasemotion:              "git://github.com/vim-scripts/camelcasemotion"
 colorsampler:                 "git://github.com/vim-scripts/Color-Sampler-Pack.git"
@@ -26,6 +28,7 @@ supertab:                     "git://github.com/ervandew/supertab.git"
 textile.vim:                  "git://github.com/timcharper/textile.vim.git"
 trailing-whitespace:          "git://github.com/bronson/vim-trailing-whitespace.git"
 vim-coffee-script:            "git://github.com/kchmck/vim-coffee-script.git"
+showmarks:                    "git://github.com/bootleq/ShowMarks.git"
 
 rails:                        "git://github.com/tpope/vim-rails.git"
 rake:                         "git://github.com/tpope/vim-rake.git"
