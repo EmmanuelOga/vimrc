@@ -14,10 +14,13 @@ endfor
 " Map ';' to : so I don't have to press shift when typing commands.
 " http://nvie.com/posts/how-i-boosted-my-vim/
 nnoremap ; :
-"
+" escape with jj
+inoremap jj <ESC>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 colorscheme ir_black
+" colorscheme molokai
+" colorscheme mustang
 
 syntax on
 set nocompatible

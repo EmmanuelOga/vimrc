@@ -2,6 +2,9 @@
 augroup vimrcEx
 au!
 
+" Saves when the buffer looses the focus
+au FocusLost * :wa
+
 " For all text files set 'textwidth' to 78 characters.
 autocmd FileType text setlocal textwidth=78
 
