@@ -10,6 +10,7 @@ jQuery:                       "git://github.com/vim-scripts/jQuery.git"
 taglist:                      "git://github.com/vim-scripts/taglist.vim"
 zoomwin:                      "git://github.com/vim-scripts/ZoomWin.git"
 matchit:                      "git://github.com/vim-scripts/matchit.zip.git"
+renamer:                      "https://github.com/vim-scripts/renamer.vim.git"
 
 YAIFA:                        "git://github.com/Raimondi/YAIFA.git"
 ack:                          "git://github.com/mileszs/ack.vim.git"
