@@ -62,12 +62,16 @@ endif
 
 let colors_name = "ir_black"
 
-
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
-hi SignColumn       guifg=#1010FD     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi MyTagListTagName  guifg=#AFFFFF     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi MyTagListTagScope guifg=#FAFFFF     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi MyTagListTitle    guifg=#FFAFFF     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi MyTagListComment  guifg=#FFFAFF     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi MyTagListFileName guifg=#FF6C60     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
+                       " #00A0A0
 
-" ShowMarks
+hi SignColumn       guifg=#1010FD     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
 hi ShowMarksHLl     guifg=#701010     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
 hi ShowMarksHLu     guifg=#701010     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
 hi ShowMarksHLo     guifg=#701010     guibg=#101010     gui=NONE      ctermfg=white       ctermbg=darkgray    cterm=NONE
