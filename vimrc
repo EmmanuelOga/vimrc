@@ -19,11 +19,11 @@ inoremap jj <ESC>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Lights
-colorschem ironman
+" colorschem ironman
 " colorschem fruit
 
 " Darks
-" colorscheme ir_black
+colorscheme ir_black
 " colorscheme molokai
 " colorscheme mustang
 
