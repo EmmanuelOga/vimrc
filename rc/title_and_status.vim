@@ -5,8 +5,8 @@ set laststatus=2
 " Setting status line resets set ruler, so we need to emulate it
 " set statusline+=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
-" http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
-set statusline=%t                               " tail of the filename
+" set statusline=%t                             " tail of the filename
+set statusline=%f                               " the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
 set statusline+=%{fugitive#statusline()}        " git branch
 set statusline+=%{&ff}]                         " file format

@@ -1,5 +1,5 @@
 " fuzzy find buffer from all those opened
-map <Leader>fb :FufBuffer<CR>
+map <Leader>ff :FufBuffer<CR>
 
 " fuzzy find help via help tags
 map <Leader>fh :FufHelp<CR>

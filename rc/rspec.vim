@@ -5,7 +5,7 @@ function! RunSpec(args)
  else
    let spec = "bundle exec rspec"
  end
- let cmd = ":! " . spec . " % -cfn " . a:args . " ; sleep "
+ let cmd = ":! rvm ree exec bash -c \"cd " . getcwd() . "; " . spec . " % " . a:args . " ; read\""
  execute cmd
 endfunction
 

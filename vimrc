@@ -18,7 +18,12 @@ nnoremap ; :
 inoremap jj <ESC>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme ir_black
+" Lights
+colorschem ironman
+" colorschem fruit
+
+" Darks
+" colorscheme ir_black
 " colorscheme molokai
 " colorscheme mustang
 
@@ -129,14 +134,6 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " expand %% to filepath of current file
 cabbr %% <C-R>=expand('%:p:h')<CR>
-
-" Unimpaired configuration
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
 
 " Use modeline overrides
 set modeline
