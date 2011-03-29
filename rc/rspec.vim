@@ -3,7 +3,7 @@ function! RunSpec(args)
  if exists("b:rails_root") && filereadable(b:rails_root . "/script/spec")
    let spec = b:rails_root . "/script/spec"
  else
-   let spec = "bundle exec rspec"
+   let spec = "bundle exec rspec --no-color"
  end
  let cmd = ":! rvm ree exec bash -c \"cd " . getcwd() . "; " . spec . " % " . a:args . " ; read\""
  execute cmd
