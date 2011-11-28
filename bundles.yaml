@@ -1,11 +1,15 @@
 ---
-"hexHighLight/plugin":        "git://github.com/EmmanuelOga/hexHighlight.git"
+hexHighLight:                 "git://github.com/EmmanuelOga/hexHighlight.git"
+lookupfile:                   "https://github.com/vim-scripts/lookupfile.git"
+gentutils:                    "https://github.com/vim-scripts/genutils.git"
+mustache:                     "git://github.com/juvenn/mustache.vim.git"
+
+hammer:                       "https://github.com/robgleeson/hammer.vim.git"
 
 IndexedSearch:                "git://github.com/vim-scripts/IndexedSearch.git"
 camelcasemotion:              "git://github.com/vim-scripts/camelcasemotion"
 colorsampler:                 "git://github.com/vim-scripts/Color-Sampler-Pack.git"
 scrollcolors:                 "git://github.com/vim-scripts/ScrollColors.git"
-conque:                       "git://github.com/vim-scripts/Conque-Shell.git"
 csapprox:                     "git://github.com/vim-scripts/CSApprox.git"
 jQuery:                       "git://github.com/vim-scripts/jQuery.git"
 taglist:                      "git://github.com/vim-scripts/taglist.vim"
@@ -46,8 +50,8 @@ command-t:                    "git://git.wincent.com/command-t.git"
 fuzzy-finder:                 "http://bitbucket.org/ns9tks/vim-fuzzyfinder"
 v9:                           "http://bitbucket.org/ns9tks/vim-l9"
 
-snipmate:                     "git://github.com/msanders/snipmate.vim.git"
-"snipmate-snippets/snippets": "git://github.com/scrooloose/snipmate-snippets.git"
+#snipmate:                     "git://github.com/msanders/snipmate.vim.git"
+#"snipmate-snippets/snippets": "git://github.com/scrooloose/snipmate-snippets.git"
 
 tcomment:                     "git://github.com/tomtom/tcomment_vim.git"
 # nerdcommenter:              "git://github.com/scrooloose/nerdcommenter.git"
@@ -71,3 +75,6 @@ surround:                     "git://github.com/tpope/vim-surround.git"
 unimpaired:                   "git://github.com/tpope/vim-unimpaired.git"
 vividchalk:                   "git://github.com/tpope/vim-vividchalk.git"
 zencoding:                    "git://github.com/mattn/zencoding-vim.git"
+
+cobra:                        "https://bitbucket.org/webnov8/cobra-on-vim"
+haxe:                         "https://github.com/MarcWeber/vim-haxe.git"
