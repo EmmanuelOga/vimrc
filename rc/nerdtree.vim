@@ -101,3 +101,10 @@ call s:DefineCommand("cd", "ChangeDirectory")
 call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
 call s:DefineCommand("e", "Edit")
+
+let NERDChristmasTree=1
+let NERDTreeAutoCenter=1
+let NERDTreeDirArrows=1
+let NERDTreeHighlightCursorline=1
+let NERDTreeMinimalUI=1
+let NERDTreeWinPos=1
