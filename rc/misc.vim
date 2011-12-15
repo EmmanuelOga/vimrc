@@ -1,4 +1,7 @@
+filetype off
 
+" load the plugin and indent settings for the detected filetype
+filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map ';' to : so I don't have to press shift when typing commands.
