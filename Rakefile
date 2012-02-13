@@ -45,8 +45,12 @@ task :cleanup_bundles do
   Dir[File.expand_path(File.join(BUNDLES_BASE_PATH, "*"))].each do |path|
     unless current.detect { |any| any =~ /^#{path}/ }
       puts(path)
-      puts("   ...is not in the list of bundles. Run: 'rake cleanup_bundles PERFORM_CLEANUP=1' to remove.")
-      system("rm -r #{path.shellescape}") if ENV["PERFORM_CLEANUP"]
+
+      if ENV["PERFORM_CLEANUP"]
+        system "rm -rf #{path.shellescape}"
+      else
+        puts "   ...is not in the list of bundles. Run: 'rake cleanup_bundles PERFORM_CLEANUP=1' to remove."
+      end
     end
   end
 
