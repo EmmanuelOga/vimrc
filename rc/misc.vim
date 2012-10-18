@@ -7,6 +7,7 @@ filetype plugin indent on
 " Map ';' to : so I don't have to press shift when typing commands.
 " http://nvie.com/posts/how-i-boosted-my-vim/
 nnoremap ; :
+
 " escape with jj
 inoremap jj <ESC>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -21,7 +22,6 @@ colorscheme ir_black
 " colorscheme mustang
 
 syntax on
-set nocompatible
 set number
 
 " Whitespace stuff
@@ -55,10 +55,6 @@ set history=100 " keep 50 lines of command line history
 set ruler       " show the cursor position all the time
 set showcmd     " display incomplete commands
 
-" alt+n or alt+p to navigate between entries in QuickFix
-map <silent> <m-p> :cp <cr>
-map <silent> <m-n> :cn <cr>
-
 " Change which file opens after executing :Rails command
 let g:rails_default_file='config/database.yml'
 
@@ -70,13 +66,13 @@ set timeoutlen=500     " Time to wait after ESC (default causes an annoying dela
 " Formatting (some of these are for coding in C and C++)
 set noautoindent
 set smartindent
+set smarttab
+set cindent
 
 set bs=2               " Backspace over everything in insert mode
-set cindent
 set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
 set formatoptions=tcqr
-set smarttab
 set ts=2               " Tabs are 2 spaces
 
 " Visual
